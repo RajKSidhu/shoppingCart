@@ -14,7 +14,7 @@ mvn package
 
 * Clone the Git Repository using the command.
 
-  $ git clone https://github.com/RajKSidhu/books-sample.git
+  $ git clone https://github.com/RajKSidhu/shoppingCart.git
 
 * Import project into IDE: Intellij/Eclipse/STS, etc. 
 
@@ -36,12 +36,11 @@ Check Module Settings for the Java SDK.
 ## Endpoints
 **Context path:** The value of the context-path is mentioned. 
 
-*path : [/library](/library)*
+*path : [/shoppingCart](/shoppingCart)*
 
 HTTP Methods | Endpoint name 
 ---|---|
-**POST** | /book
-**PUT** | /book/{id}
-**GET** | /books
-**GET** | /book/{id}
-**DELETE** | /book/{id}
+**POST** | /product
+**GET** | /product
+**GET** | /order
+**GET** | /order/{id}
