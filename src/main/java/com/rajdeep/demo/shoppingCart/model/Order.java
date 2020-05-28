@@ -12,26 +12,16 @@ public class Order {
 
     private int orderNum;
     private Date orderDate;
-    private double amount;
-
+    private double purchaseAmount;
+    private double billAmount;
     private String customerName;
     private String customerAddress;
-    private String customerEmail;
+    private String customerType;
     private String customerPhone;
 
     public Order(){
     }
 
-    public Order(Long id, int orderNum, Date orderDate, double amount, String customerName, String customerAddress, String customerEmail, String customerPhone){
-        this.id = id;
-        this.orderNum = orderNum;
-        this.orderDate = orderDate;
-        this.amount = amount;
-        this.customerName = customerName;
-        this.customerAddress = customerAddress;
-        this.customerEmail = customerEmail;
-        this.customerPhone = customerPhone;
-    }
     public Long getId() {
         return id;
     }
@@ -56,12 +46,20 @@ public class Order {
         this.orderDate = orderDate;
     }
 
-    public double getAmount() {
-        return amount;
+    public double getPurchaseAmount() {
+        return purchaseAmount;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setPurchaseAmount(double purchaseAmount) {
+        this.purchaseAmount = purchaseAmount;
+    }
+
+    public double getBillAmount() {
+        return billAmount;
+    }
+
+    public void setBillAmount(double billAmount) {
+        this.billAmount = billAmount;
     }
 
     public String getCustomerName() {
@@ -80,12 +78,12 @@ public class Order {
         this.customerAddress = customerAddress;
     }
 
-    public String getCustomerEmail() {
-        return customerEmail;
+    public String getCustomerType() {
+        return customerType;
     }
 
-    public void setCustomerEmail(String customerEmail) {
-        this.customerEmail = customerEmail;
+    public void setCustomerType(String customerType) {
+        this.customerType = customerType;
     }
 
     public String getCustomerPhone() {
@@ -102,10 +100,11 @@ public class Order {
                 "id=" + id +
                 ", orderNum=" + orderNum +
                 ", orderDate=" + orderDate +
-                ", amount=" + amount +
+                ", purchaseAmount=" + purchaseAmount +
+                ", billAmount=" + billAmount +
                 ", customerName='" + customerName + '\'' +
                 ", customerAddress='" + customerAddress + '\'' +
-                ", customerEmail='" + customerEmail + '\'' +
+                ", customerEmail='" + customerType + '\'' +
                 ", customerPhone='" + customerPhone + '\'' +
                 '}';
     }

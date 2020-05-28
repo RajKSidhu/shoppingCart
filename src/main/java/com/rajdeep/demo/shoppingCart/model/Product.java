@@ -10,15 +10,15 @@ public class Product {
     private Long id;
 
     private String name;
-    private double price;
+    private double billAmount;
 
     public Product(){
     }
 
-    public Product(Long id, String name, double price) {
+    public Product(Long id, String name, double billAmount) {
         this.id = id;
         this.name = name;
-        this.price = price;
+        this.billAmount = billAmount;
     }
 
     public Long getId() {
@@ -37,12 +37,12 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
+    public double getBillAmount() {
+        return billAmount;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setBillAmount(double billAmount) {
+        this.billAmount = billAmount;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price=" + price +
+                ", price=" + billAmount +
                 '}';
     }
 }

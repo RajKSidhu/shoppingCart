@@ -16,7 +16,13 @@ public class ShoppingController{
     @Autowired
     private ShoppingService shoppingService;
 
-    @GetMapping("/books")
+    @GetMapping("/calculateBill/{customerType}")
+    public double getCustomerBillAmount(@PathVariable("purchaseAmount") double purchaseAmount,
+                                       @PathVariable("customerType") String customerType){
+        return shoppingService.getCustomerBillAmount(purchaseAmount, customerType);
+    }
+
+    @GetMapping("/products")
     public List<Product> getAllProducts() {
         return shoppingService.getAllProducts();
     }
@@ -26,8 +32,8 @@ public class ShoppingController{
         return shoppingService.getProduct(productId);
     }
 
-    @PostMapping("/book")
-    public Product addBook(@Valid @RequestBody Product product) {
+    @PostMapping("/product")
+    public Product addProduct(@Valid @RequestBody Product product) {
         return shoppingService.addProduct(product);
     }
 }
