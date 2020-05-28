@@ -43,5 +43,4 @@ HTTP Methods | Endpoint name
 **POST** | /product
 **GET** | /product
 **GET** | /product/{id}
-**GET** | /order
-**GET** | /order/{id}
+**GET** | /calculateBill/{customerType}
